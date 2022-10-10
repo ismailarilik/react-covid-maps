@@ -9,6 +9,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [Git](https://git-scm.com/downloads)
 - [Node.js](https://nodejs.org/en/download/current/)
 
+## Preparing
+
+- Clone the repo from GitHub: `git clone https://github.com/ismailarilik/react-covid-maps.git`
+- Install dependencies using npm: `npm install`
+
 ## Available Scripts
 
 In the project directory, you can run:
