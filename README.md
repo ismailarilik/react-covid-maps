@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# react-covid-maps
+
+> A global maps application aims to display COVID-19 statistics by countries, written with React
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
