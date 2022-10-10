@@ -80,3 +80,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Attributions
+
+- Data comes from [https://rapidapi.com/KishCom/api/covid-19-coronavirus-statistics/](https://rapidapi.com/KishCom/api/covid-19-coronavirus-statistics/).
+- Maps view is provided via [https://www.react-simple-maps.io/](https://www.react-simple-maps.io/).
