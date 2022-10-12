@@ -1,4 +1,5 @@
 import { ZoomableGroup, ComposableMap, Geographies, Geography, Sphere, Graticule } from 'react-simple-maps'
+import { Link } from 'react-router-dom'
 
 const geoUrl = '/geo.json'
 
@@ -12,21 +13,21 @@ const MapChart = ({ setTooltipContent }) => {
           <Geographies geography={geoUrl}>
             {({ geographies }) => geographies.map(geo => {
               return (
-                <Geography
-                  key={geo.rsmKey}
-                  geography={geo}
-                  onMouseEnter={() => setTooltipContent(geo.properties.name)}
-                  onMouseLeave={() => setTooltipContent('')}
-                  onClick={() => console.log('Oldu')}
-                  style={{
-                    default: {
-                      fill: '#888'
-                    },
-                    hover: {
-                      fill: '#F00'
-                    }
-                  }}
-                />
+                <Link to={`covid-data/${geo.properties.name}`} key={geo.rsmKey}>
+                  <Geography
+                    geography={geo}
+                    onMouseEnter={() => setTooltipContent(geo.properties.name)}
+                    onMouseLeave={() => setTooltipContent('')}
+                    style={{
+                      default: {
+                        fill: '#888'
+                      },
+                      hover: {
+                        fill: '#F00'
+                      }
+                    }}
+                  />
+                </Link>
               )
             })}
           </Geographies>
