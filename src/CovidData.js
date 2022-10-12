@@ -16,6 +16,11 @@ const CovidData = () => {
   const covidData = useLoaderData()
   const navigation = useNavigation()
 
+  // Handle possible errors in the response
+  if (covidData.error || covidData.statusCode !== 200) {
+    throw new Error(covidData.message)
+  }
+
   if (navigation.state === 'loading') {
     return <div>Loading...</div>
   } else {
