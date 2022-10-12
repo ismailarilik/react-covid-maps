@@ -1,4 +1,4 @@
-import { useLoaderData } from 'react-router-dom'
+import { useLoaderData, useNavigation } from 'react-router-dom'
 
 const loader = async ({ params }) => {
   return fetch(
@@ -14,17 +14,22 @@ const loader = async ({ params }) => {
 
 const CovidData = () => {
   const covidData = useLoaderData()
+  const navigation = useNavigation()
 
-  return (
-    <div>
-      <div>Recovered: {covidData.data.recovered}</div>
-      <div>Deaths: {covidData.data.deaths}</div>
-      <div>Confirmed: {covidData.data.confirmed}</div>
-      <div>Last checked: {covidData.data.lastChecked}</div>
-      <div>Last reported: {covidData.data.lastReported}</div>
-      <div>Location: {covidData.data.location}</div>
-    </div>
-  );
+  if (navigation.state === 'loading') {
+    return <div>Loading...</div>
+  } else {
+    return (
+      <div>
+        <div>Recovered: {covidData.data.recovered}</div>
+        <div>Deaths: {covidData.data.deaths}</div>
+        <div>Confirmed: {covidData.data.confirmed}</div>
+        <div>Last checked: {covidData.data.lastChecked}</div>
+        <div>Last reported: {covidData.data.lastReported}</div>
+        <div>Location: {covidData.data.location}</div>
+      </div>
+    )
+  }
 }
 
 export default CovidData;
