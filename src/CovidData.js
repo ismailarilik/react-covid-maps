@@ -29,13 +29,21 @@ const CovidData = () => {
     )
   } else {
     return (
-      <div>
-        <div>Recovered: {covidData.data.recovered}</div>
-        <div>Deaths: {covidData.data.deaths}</div>
-        <div>Confirmed: {covidData.data.confirmed}</div>
-        <div>Last checked: {covidData.data.lastChecked}</div>
-        <div>Last reported: {covidData.data.lastReported}</div>
-        <div>Location: {covidData.data.location}</div>
+      <div className="flex flex-col items-center justify-center gap-y-3 h-screen">
+        <div><span className="font-bold">Recovered:</span> {covidData.data.recovered || 'N/A'}</div>
+        <div><span className="font-bold">Deaths:</span> {covidData.data.deaths || 'N/A'}</div>
+        <div><span className="font-bold">Confirmed:</span> {covidData.data.confirmed || 'N/A'}</div>
+        <div>
+          <span className="font-bold">Last checked:</span>
+          &nbsp;
+          {(new Date(covidData.data.lastChecked)).toLocaleString() || 'N/A'}
+        </div>
+        <div>
+          <span className="font-bold">Last reported:</span>
+          &nbsp;
+          {(new Date(covidData.data.lastReported)).toLocaleString() || 'N/A'}
+        </div>
+        <div><span className="font-bold">Location:</span> {covidData.data.location.toUpperCase() || 'N/A'}</div>
       </div>
     )
   }
