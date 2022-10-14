@@ -1,0 +1,10 @@
+services:
+  app:
+    image: "node:18"
+    user: "root"
+    working_dir: /home/node/app
+    volumes:
+      - ./:/home/node/app
+    expose:
+      - "3000"
+    command: bash -c "npm install && npm start"

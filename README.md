@@ -7,12 +7,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Requirements
 
 - [Git](https://git-scm.com/downloads)
-- [Node.js](https://nodejs.org/en/download/current/)
+- [Docker](https://www.docker.com/products/docker-desktop/)
 
-## Preparing
+## Quick Start
 
 - Clone the repo from GitHub: `git clone https://github.com/ismailarilik/react-covid-maps.git`
-- Install dependencies using npm: `npm install`
+- Run the app: `docker compose run -p 3000:3000 app`
+- Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## Available Scripts
 
