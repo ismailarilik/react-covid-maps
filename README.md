@@ -2,6 +2,8 @@
 
 > A global maps application aims to display COVID-19 statistics by countries, written with React
 
+![Screenshot](https://github.com/ismailarilik/react-covid-maps/blob/main/screenshot.png?raw=true)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Requirements
