@@ -1,7 +1,7 @@
 import { ZoomableGroup, ComposableMap, Geographies, Geography, Sphere, Graticule } from 'react-simple-maps'
 import { Link } from 'react-router-dom'
 
-const geoUrl = '/geo.json'
+const geoUrl = '/react-covid-maps/geo.json'
 
 const MapChart = ({ setTooltipContent }) => {
   return (
