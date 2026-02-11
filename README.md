@@ -1,6 +1,6 @@
 # react-covid-maps
 
-> A global maps application aims to display COVID-19 statistics by countries, written with React
+> A global maps application aims to display COVID-19 statistics by countries, written using React and Docker.
 
 :link: [https://ismailarilik.com/react-covid-maps/](https://ismailarilik.com/react-covid-maps/)
 
